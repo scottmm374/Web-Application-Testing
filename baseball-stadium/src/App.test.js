@@ -6,7 +6,7 @@ import App from './App';
 
 afterEach(rtl.cleanup);
 
-test('renders without crashing', () => {
-  const wrapper = rtl.render(<App />);
-  wrapper.debug();
-)}
+test('ball is found', () => {
+  const {getByText} = rtl.render(<App />);
+  getByText('Ball');
+});

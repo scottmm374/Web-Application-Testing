@@ -44,7 +44,7 @@ function Scores() {
 
   return (
     <div>
-      <Display balls={balls} strikes={strikes} />
+      <Display balls={balls} strikes={strikes} fouls={fouls} hit={hit} />
       <button onClick={ballsCount}>Ball</button>
       <button onClick={strikeCount}>Strike</button>
       <button onClick={foulCount}>Foul</button>
