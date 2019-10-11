@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Display from "../display/Display";
 
 function Scores() {
   const [balls, setBalls] = useState(0);
@@ -29,22 +30,21 @@ function Scores() {
   };
 
   const hitCount = () => {
-    setHit(1);
-    if (hit === 1) {
-      setBalls(0);
-      setStrikes(0);
-      setFouls(0);
-    }
-
-    //   console.log(balls, fouls, strikes)
+    setHit(hit + 1);
+    setBalls(0);
+    setStrikes(0);
+    setFouls(0);
   };
 
+  console.log("Hit results", balls, fouls, strikes);
   console.log("balls", balls);
   console.log("Strikes", strikes);
   console.log("Fouls", fouls);
   console.log("Hit", hit);
+
   return (
     <div>
+      <Display balls={balls} strikes={strikes} />
       <button onClick={ballsCount}>Ball</button>
       <button onClick={strikeCount}>Strike</button>
       <button onClick={foulCount}>Foul</button>
