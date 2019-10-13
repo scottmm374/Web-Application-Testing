@@ -1,5 +1,25 @@
 import React, { useState } from "react";
 import Display from "../display/Display";
+import styled, { css } from 'styled-components'
+
+const Button = styled.button`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid tomato;
+  color: tomato;
+  margin: 0.5em 1em;
+  padding: 0.25em 1em;
+  :hover {
+    border: 2px solid RoyalBlue
+    color: RoyalBlue;
+  }
+
+  // ${props => props.primary && css`
+  //   background: palevioletred;
+  //   color: white;
+  // `}
+`;
+
 
 function Scores() {
   const [balls, setBalls] = useState(0);
@@ -45,10 +65,10 @@ function Scores() {
   return (
     <div>
       <Display balls={balls} strikes={strikes} fouls={fouls} hit={hit} />
-      <button onClick={ballsCount}>Ball</button>
-      <button onClick={strikeCount}>Strike</button>
-      <button onClick={foulCount}>Foul</button>
-      <button onClick={hitCount}>Hit</button>
+      <Button onClick={ballsCount}>Ball</Button>
+      <Button onClick={strikeCount}>Strike</Button>
+      <Button onClick={foulCount}>Foul</Button>
+      <Button onClick={hitCount}>Hit</Button>
     </div>
   );
 }
