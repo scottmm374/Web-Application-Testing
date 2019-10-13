@@ -1,13 +1,13 @@
-import React from 'react';
-import Scores from './components/dashboard/Scores'
+import React from "react";
+import Scores from "./components/dashboard/Scores";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <Scores />
+        <Scores />
       </header>
     </div>
   );

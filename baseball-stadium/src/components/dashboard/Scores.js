@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Display from "../display/Display";
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 const Button = styled.button`
   background: transparent;
@@ -13,13 +13,7 @@ const Button = styled.button`
     border: 2px solid RoyalBlue
     color: RoyalBlue;
   }
-
-  // ${props => props.primary && css`
-  //   background: palevioletred;
-  //   color: white;
-  // `}
 `;
-
 
 function Scores() {
   const [balls, setBalls] = useState(0);
